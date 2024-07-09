@@ -1,0 +1,247 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style type="text/css">
+    body {
+        background: url(fondo.jpg) no-repeat;
+        background-size: 10000px 10000px;
+    }
+     header {
+        margin: 0px;
+        padding:0 px;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: white;
+    }
+    .menu1 {
+       width: 100%;
+       height: 70px;
+       background: #086E12;
+       padding: 0px 20px;
+    }
+    .menu2 {
+max-width:1200px;
+margin: auto;
+height: 100%;
+    }
+    nav {
+        height: 100%;
+    }
+    nav > ul {
+height: 100%;
+display: flex;
+    }
+    nav ul li {
+        height: 100%;
+        padding: 0px 31px;
+        list-style: none;
+        position: relative;
+    }
+        nav > ul > li:first-child > a {
+            background-image: url(ritmo-cardiaco\ \(1\).png);
+            background-size: 24px;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+            nav > ul > li:first-child:hover > a {
+            background-image: url(logo.png);
+            background-size: 24px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            }
+    nav > ul > li > a {
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0px 25px;
+        color: white;
+        text-transform: uppercase;
+        font-size: 14 px;
+        transition: all 300ms ease;
+    }
+
+    nav > ul > li > a:hover{
+        transform: scale(1.1);
+        background: #0B8F18;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    }
+    #selected{
+        width: 100%;
+        height: 100%;
+        transform: scale(1.1);
+        background-color: #0B8F18;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    }
+    nav ul li ul {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 90px;
+        left:-5 px;
+        padding: 14px 0px;
+        visibility: hidden;
+        opacity: 0;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+        z-index: 10;
+        transition: all 300ms ease;
+    }
+    nav ul li:hover > ul {
+        visibility:visible;
+        opacity: 1;
+        top: 70px;
+
+    }
+    nav ul li ul:before {
+        content:'';
+        width: 0;
+        height: 0;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-bottom: 12px solid white;
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    
+    }
+    nav ul li ul li a {
+        text-decoration: none;
+        display: block;
+        color: #0B8F18;
+        padding: 6px;
+        padding-left: 14px;
+        margin-top: 10px;
+        font-size: 14px;
+        text-transform: uppercase;
+        transition: all 300ms ease;
+
+    }
+    nav ul li ul li a:hover {
+        background: #086E12;
+        color: #fff;
+        transform: scale(1.1);
+        padding-left: 30px;
+        font-size: 14px; 
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    }
+    .jiji {
+display: flex;
+width: 100vw;
+justify-content: center;
+}
+.titulo34 {
+    text-align: center;
+    font-size: 110px;
+    color: #007A04;
+    -webkit-text-stroke-width: 1.2px;
+    -webkit-text-stroke-color: #FFF;
+}
+.re1 {
+    width: 20vw;
+    height: 26vh;
+    padding: 0px;
+    margin: 0px;
+    padding-right: 10vw;
+}
+.re2 {
+    padding: 0px;
+    width: 20vw;
+    height: 26vh;
+    margin: 0px;
+    padding-left: 10vw;
+}
+.video2 {
+    font-size: 50px;
+    text-align:left;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #FFF;
+}
+.video3 {
+    font-size: 50px;
+    text-align:right;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #FFF;
+}
+.video4 {
+    font-size: 50px;
+    text-align:center;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #FFF;
+}
+.j1 {
+align-items: left;
+}
+.j2 {
+    float: right;
+}
+    </style>
+<b>
+<title>
+    MATERIAL AUDIOVISUAL
+</title>
+</b>
+</head>
+<body>
+    <header>
+        <div class="menu1">
+        <div class="menu2">
+            <nav>
+        <ul>
+        <li> <a href="#" id="selected"></a></li>
+        <li> <a href="file:///E:/PROYECTO%20-%20copia/VIDA%20VERDE.html">INICIO</a>
+        </li>
+        <li> <a href="#">MATERIAL AUDIOVISUAL</a></li>
+        <li> <a href="#">CREDITOS</a>
+            <ul>
+                <li> <a href="https://youtube.com/@El vigilant14?si=DQ6g22gw0Ym77xqG"> Vigilant </a></li>
+                <li> <a href="#"> Haapyfeat </a></li>
+            </ul>
+        </li>
+        </ul>
+        </nav>
+        </div>
+        </div>
+        </header>
+        <br>
+        <br>
+        <div class="jiji">
+            <img class="re1" src="rir.png"/>
+            <h1 class="titulo34" > MATERIAL AUDIOVISUAL </h1>
+            <img class="re2" src="rir.png"/>
+            </div>
+            <div class="complete">
+                <div class="j1">
+                <div class="video22">
+            <h2 class="video2"> NUESTRO PODCAST</h2>
+            </div>
+            <video width="640" height="360" controls> 
+                <source src="podcast.mp4" type="video/mp4">
+</video>
+</div>
+<div class="j2">
+<div class="video33">
+<h2 class="video3"> ENCUESTA </h2>
+            </div>
+            <video width="640" height="360" controls> 
+                <source src="videoepico.mp4" type="video/mp4">
+                </video>
+            </div>
+                <div class="j3">
+                <div class="video44">
+                    <h2 class="video4"> ENTREVISTA </h2>
+                    </div>
+                    <audio width="640" height="360" controls> 
+                        <source src="entrevistas.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+                    </div>
+    </body>
+    </html>

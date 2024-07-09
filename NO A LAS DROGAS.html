@@ -1,0 +1,532 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <style type="text/css">
+.container{
+    display:flex;
+}
+.imgen {
+    width: 18vw;
+    height: 15vh;
+    margin: 0 40px;
+}
+header {
+        margin: 0px;
+        padding:0 px;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: white;
+    }
+    .menu1 {
+       width: 100%;
+       height: 70px;
+       background: #086E12;
+       padding: 0px 20px;
+    }
+    .menu2 {
+max-width:1200px;
+margin: auto;
+height: 100%;
+    }
+    nav {
+        height: 100%;
+    }
+    nav > ul {
+height: 100%;
+display: flex;
+    }
+    nav ul li {
+        height: 100%;
+        padding: 0px 31px;
+        list-style: none;
+        position: relative;
+    }
+        nav > ul > li:first-child > a {
+            background-image: url(ritmo-cardiaco\ \(1\).png);
+            background-size: 24px;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+            nav > ul > li:first-child:hover > a {
+            background-image: url(logo.png);
+            background-size: 24px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            }
+    nav > ul > li > a {
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0px 25px;
+        color: white;
+        text-transform: uppercase;
+        font-size: 14 px;
+        transition: all 300ms ease;
+    }
+
+    nav > ul > li > a:hover{
+        transform: scale(1.1);
+        background: #0B8F18;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    }
+    #selected{
+        width: 100%;
+        height: 100%;
+        transform: scale(1.1);
+        background-color: #0B8F18;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    }
+    nav ul li ul {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 90px;
+        left:-5 px;
+        padding: 14px 0px;
+        visibility: hidden;
+        opacity: 0;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+        z-index: 10;
+        transition: all 300ms ease;
+    }
+    nav ul li:hover > ul {
+        visibility:visible;
+        opacity: 1;
+        top: 70px;
+
+    }
+    nav ul li ul:before {
+        content:'';
+        width: 0;
+        height: 0;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-bottom: 12px solid white;
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    
+    }
+    nav ul li ul li a {
+        text-decoration: none;
+        display: block;
+        color: #0B8F18;
+        padding: 6px;
+        padding-left: 14px;
+        margin-top: 10px;
+        font-size: 14px;
+        text-transform: uppercase;
+        transition: all 300ms ease;
+
+    }
+    nav ul li ul li a:hover {
+        background: #086E12;
+        color: #fff;
+        transform: scale(1.1);
+        padding-left: 30px;
+        font-size: 14px; 
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    }
+    .jiji {
+display: flex;
+width: 100vw;
+justify-content: center;
+}
+.titulo34 {
+    text-align: center;
+    font-size: 110px;
+}
+.nod {
+    width: 18vw;
+    height: 26vh;
+    padding: 0px;
+    margin: 0px;
+    padding-right: 7vw;
+}
+.nod2 {
+    padding: 0px;
+    width: 18vw;
+    height: 26vh;
+    margin: 0px;
+    padding-left: 7vw;
+}
+.barr {
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+       width: 100vw;
+       height: 150px;
+       background: #0D3113;
+    }
+    .nono {
+        width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        background: #116B26;
+        margin-top: 15px;
+    }
+    .sisi {
+        display: flex;
+        margin-top: 15px;
+        width: 300px;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        background: #116B26;
+    }
+    li .yes1 {
+    width: 310px;
+    height: 10px;
+    padding: 0;
+    margin: 0;
+}
+li .yes2 {
+    width: 260px;
+    height: 10px;
+    padding: 0;
+    margin: 0;
+}
+    .gogo {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        width: 310px;
+        height: 10px;
+        background-color: #FFF;
+        border-radius: 20px;
+    }
+    .gogo2 {
+        margin: 0;
+        padding: 0;
+    list-style: none;
+        width: 260px;
+        height: 10px;
+        background-color: #FFF;
+        border-radius: 20px;
+}
+</style>
+</head>
+</style>
+<title>
+NO A LAS DROGAS
+</title>
+</head>                                                                                                                                                                                               
+<body background="taller6.png">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <header>
+        <div class="menu1">
+        <div class="menu2">
+            <nav>
+        <ul>
+        <li> <a href="#" id="selected"></a></li>
+        <li> <a href="#">INICIO</a>
+        </li>
+        <li> <a href="#">MATERIAL AUDIOVISUAL</a></li>
+        <li> <a href="#">CREDITOS</a>
+            <ul>
+                <li> <a href="https://youtube.com/@El vigilant14?si=DQ6g22gw0Ym77xqG"> Vigilant </a></li>
+                <li> <a href="#"> Haapyfeat </a></li>
+            </ul>
+        </li>
+        </ul>
+        </nav>
+        </div>
+        </div>
+        </header>
+    <b>
+        <font color="3C1FE9" face="cambria" size="7">
+            <div class="jiji">
+            <img class="nod" src="nod.png"/>
+            <h1 class="titulo34">NO A LAS DROGAS</h1>
+            <img class="nod2" src="nod.png"/>
+            </div>
+            <font color="black" size="5">
+                <br>
+                <br>
+                <br>
+                <br>
+                <p> En estos ultimos dias, la influencia de diversas sustancias crece cada vez más y en toda la población, resultando en enormes daños, justo como si fuera una infección ¿Ya sabes a que me refiero? Seguro que por el título si, pero de todas maneras lo repetire: Las drogas. Y es que a pesar de todos los intentos de hacer conciencia en la población, ya son inumerables casos donde estas sustancias llegan a la vida de las personas y las arruinan por completo. Por ende, te compartiremos la información del tema y la razón del porque estas drogas son un gran peligro, ya que al menos tu si estas decidido a cuidar tu salud, cuidar tu vida. Comencemos. </p>
+                <hr color="black" size="2">
+                <div class="container">
+                <table style="float:left" border="3" bordercolor="3C1FE9">
+                    <tr>
+                        <td>
+                        CONTENIDO
+                        <br>
+                        <a href="#queson">-¿QUÉ SON?</a>
+                        <br>
+                        <a href="#tipo">-TIPOS DE DROGAS</a>
+                        <br>
+                        <a href="#mas">-DROGAS MÁS CONSUMIDAS</a>
+                        <br>
+                        <a href="#podcast">-MÁS INFORMACIÓN</a>
+                        </td>
+                    </tr>
+                </table>
+                <img class="imgen" src="taller100.jpg" width="250" height="180"/>
+                <img class="imgen" src="taller101.jpg" width="250" heigth="180"/>
+                <img class="imgen" src="taller 102.jfif" width="250" heigth="180"/>
+                </div>
+                <font color="3C1FE9">
+                <a name="queson"></a> <h2 align="left">¿QUÉ SON?</h2>
+                <font color="black">
+                <p align="left"> Las drogas son sustancias que pueden ser provenientes de productos naturales o que son completamente cinteticas, y que suelen ser fabricadas en laboratorios clandestinos, o tambien pueden ser medicamentos mal utilizados. Estas afectan nuestro sistema nervioso central, alterando los neurotransmisores del cerebro y haciendo que la conducta, el estado de animo o la percepción sufran daños. </p>
+                <p align="left"> Las personas que consumen drogas pueden desarrollar una enorme dependencia a ellas, llegando incluso al punto de morir si no las toman. Además obviamente el hecho de consumir o vender estas sustancias es un delito, aunque tambien depende del país. Tambien son conocidas como sustancias psicoactivas.</p>
+                    <p align="left">Tu te podras estar preguntando, si las drogas causan muchos daños ¿Por qué la gente las consumen? Bueno, la respuesta es muy absurda, solo lo hacen por placer o, segun ellos, desahogarse de sus problemas, como si eso los fuera a solucionar.</p>
+                    <font color="3C1FE9">
+                        <a name="tipo"></a><h2 align="center"> TIPOS DE DROGAS</h2>
+                        <font color="black">
+                            <p align="center"> Existen 3 clasificaciones para las drogas según el efecto que ocasionan, las cuales son:</p>
+                            <br>
+                            <br>
+                            <p style="float:left">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+                            <img style="float:left" src="estimulantes.jpg" width="200" height="160"/> 
+                            <p style="float:left">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </p>
+                            <img style="float:left" src="alucinogenas.jpg" width="200" height="160"/> 
+                            <p style="float:left">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+                            <img style="float:left" src="depresoras.jpg" width="200" height="160"/> 
+
+                            <br>
+                            <p style="float:left"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspEstimulantes&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+                            <p style="float:left">  Alucinogenas&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+                            <p style="float:left"> Depresivas</p>
+                            <br>
+                            <h3 align="left" style="color:#3C1FE9"> ESTIMULANTES</h3>
+                            <p align="left"> <span style="color:#007A04">¿QUÉ OCASIONAN?:</span> Las drogas de este tipo aceleran el funcionamiento normal del sistema nervioso central.</p>
+                            <p align="left"> <span style="color:#007A04"> EJEMPLOS:</span> Cocaína, Tabaco, Cafeína, Anfetaminas y Pasta Base.</p>
+                    <p align="left"> <span style="color:#007A04"> DAÑOS:</span> Descoordinación, Reflejos minimizados, Euforia, Falta de control emocional, Desinhibición, Agresividad, Impaciencia, Falta de cansancio, Disminución del sueño, Irritabilidad, etc...</p>
+                    <h3 align="left" style="color:#3C1FE9"> ALUCINOGENAS</h3>
+                    <p align="left"> <span style="color:#007A04"> ¿QUÉ OCASIONAN?:</span> Este tipo de drogas alteran gravemente la percepción de la realidad, el estado de animo y de los procesos de pensamiento.</p>
+                    <p align="left"> <span style="color:#007A04"> EJEMPLOS:</span> Triptaminas alucinógenas, LSD, LSA, Ketamina, Dimetiltriptamina y Hongos alucinógenos.</p>
+                   <p align="left"> <span style="color:#007A04"> DAÑOS:</span> Alucinaciones y Enormes Alteraciones en la forma de como percibimos nuestro alrededor. </p>
+                    <h3 align="left" style="color:#3C1FE9"> DEPRESORAS</h3>
+                    <p align="left"> <span style="color:#007A04">¿QUÉ OCASIONAN?:</span> Las drogas depresoras disminuyen o desaceleran el funcionamiento del sistema nervioso central, produciendo un proceso de adormecimiento cerebral, lo que puede llevar desde la desinhibición hasta el coma.</p>
+                   <p align="left"> <span style="color:#007A04"> EJEMPLOS:</span> Anfetaminas, Alcohol, Cocaína y Pasta base.</p>
+                    <p align="left"> <span style="color:#007A04"> DAÑOS:</span> Inadecuada sensación de tranquilidad y bienestar, Disminución de la capacidad de reacción, Estado de sedación y Respuestas motores lentas y torpes.</p>
+                   <a name="mas"></a> <h2 align="right"> <span style="color:#3C1FE9">DROGAS MÁS CONSUMIDAS </span></h2>
+                  <p align="left"> A pesar de que consumir drogas es una pésima decisión, como en todo existen varias de ellas que son más cotizadas que otras por sus  vendedores y compradores. Por ende, a continuación te mostramos una tabla de las drogas más consumidas actualmente a nivel global, junto con su posición y una imagen, para que puedas tener más cuidado con ellas.</p>
+                  <br>
+                  <table align="center" border="3" bordercolor="3C1FE9">
+                    <tr>
+                        <td>
+                            POSICIÓN
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            4
+                        </td>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                            6
+                        </td>
+                        <td>
+                            7
+                        </td>
+                        <td>
+                            8
+                        </td>
+                        <td>
+                            9
+                        </td>
+                        <td>
+                            10
+                        </td>
+                    </tr> 
+<tr>
+    <td>
+        SUSTANCIAS
+    </td>
+    <td>
+        Cafeína
+    </td>
+    <td>
+        Alcohol
+    </td>
+    <td>
+        Tabaco
+    </td>
+    <td>
+        Marihuana
+    </td>
+    <td>
+        Fármacos
+    </td>
+    <td>
+        Cocaína
+    </td>
+    <td>
+        Opio
+    </td>
+    <td>
+        Heroína y Morfina
+    </td>
+    <td>
+        Anfetaminas
+    </td>
+    <td>
+        Alucinógenos
+    </td>
+</tr>
+<tr>
+    <td>
+        CONSUMO ANUAL
+    </td>
+    <td>
+ 182.5 tazas per cápita
+    </td>
+    <td>
+9.5 litros per cápita
+    </td>
+    <td>
+        49 cajetillas per cápita
+    </td>
+    <td>
+        7000 toneladas (en general)
+    </td>
+    <td>
+        2000 toneladas (en general)
+    </td>
+    <td>
+        700 toneladas (en general)
+    </td>
+    <td>
+        500 toneladas (en general)
+    </td>
+    <td>
+        100 toneladas (en general)
+    </td>
+    <td>
+        65 toneladas (en general)
+    </td>
+    <td>
+        6 toneladas (en general)
+    </td>
+</tr>
+<tr>
+    <td>
+        PAÍS DONDE
+        SE CONSUMEN MÁS
+    </td>
+    <td>
+Estados Unidos
+    </td>
+    <td>
+        Islas Cook
+    </td>
+    <td>
+        Nauru
+    </td>
+    <td>
+        Israel
+    </td>                                                                                                
+    </td>
+    <td>
+        Australia
+    </td>
+    <td>
+        Afganistán
+    </td>
+    <td>
+        Seychelles y Estados Unidos
+    </td>
+    <td>
+        España 
+    </td>
+    <td>
+        España
+    </td>
+    <td>
+        Nueva Zelanda
+    </td>
+</tr>
+<tr>
+    <td>
+        IMAGEN
+    </td>
+    <td>
+
+    </td>
+    <td>
+
+    </td>
+    <td>
+
+    </td>
+    <td>
+
+    </td>
+    <td>
+
+    </td>
+    <td>
+
+    </td>
+    <td>
+
+    </td>
+    <td>
+
+    </td>
+    <td>
+
+    </td>
+    <td>
+
+    </td>
+</tr>
+                  </table>
+                  <br>
+                  <hr color="black" size="2">
+                   <br>
+                  <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <center>
+                        <div class="barr">
+    <div class="nono">
+    <div class="gogo">
+        <li class="yes1"> </li>
+    </div>
+    </div>
+    <div class="sisi">
+    <div class="gogo2">
+        <li class="yes2"> </li>
+    </div>
+    </div>
+</div>
+</b>
+</body>
+</html>

@@ -1,0 +1,469 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style type="text/css">
+header {
+        margin: 0px;
+        padding:0px;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: white;
+        z-index: 999;
+    }
+    .menu1 {
+        position: relative;
+       width: 100%;
+       height: 70px;
+       background: #086E12;
+       padding: 0px 20px;
+       z-index: 40;
+    }
+    .menu2 {
+max-width:1200px;
+margin: auto;
+height: 100%;
+z-index: 40;
+    }
+    nav {
+        height: 100%;
+    }
+    nav > ul {
+height: 100%;
+display: flex;
+z-index: 40;
+    }
+    nav ul li {
+        height: 100%;
+        padding: 0px 33px;
+        list-style: none;
+        position: relative;
+        z-index: 40;
+    }
+        nav > ul > li:first-child > a {
+            background-image: url(ahora.png);
+            background-size: 49px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            z-index: 40;
+        }
+            nav > ul > li:first-child:hover > a {
+            background-image: url(ahora2.png);
+            background-size: 54px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            z-index:40;
+        }
+    nav > ul > li > a {
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        z-index:40;
+        display: flex;
+        align-items: center;
+        padding: 0px 25px;
+        color: white;
+        text-transform: uppercase;
+        font-size: 14 px;
+        transition: all 300ms ease;
+    }
+
+    nav > ul > li > a:hover{
+        transform: scale(1.1);
+        background: #0B8F18;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    }
+    #selected{
+        width: 100%;
+        height: 100%;
+        transform: scale(1.1);
+        background-color: #0B8F18;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    }
+    nav ul li ul {
+        width: 200px;
+        z-index: 40;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 90px;
+        left:-5 px;
+        padding: 14px 0px;
+        visibility: hidden;
+        opacity: 0;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+        z-index: 40;
+        transition: all 300ms ease;
+    }
+    nav ul li:hover > ul {
+        visibility:visible;
+        opacity: 1;
+        top: 70px;
+
+    }
+    nav ul li ul:before {
+        content:'';
+        width: 0;
+        height: 0;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-bottom: 12px solid white;
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    
+    }
+    nav ul li ul li a {
+        z-index: 40;
+        text-decoration: none;
+        display: block;
+        color: #0B8F18;
+        padding: 6px;
+        padding-left: 14px;
+        margin-top: 10px;
+        font-size: 14px;
+        text-transform: uppercase;
+        transition: all 300ms ease;
+
+    }
+    nav ul li ul li a span {
+        margin-left: 10px;
+        background-image: url(NUCN1933.JPG);
+            background-size: 15px;
+            background-repeat: no-repeat;
+            background-position: center center;
+    }
+    nav ul li ul li a:hover {
+        background: #086E12;
+        color: #fff;
+        transform: scale(1.1);
+        padding-left: 30px;
+        font-size: 14px; 
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    }
+    .slider {
+        margin: 0;
+        font-family: monospace;
+    }
+    .slider {
+        padding: 0;
+        justify-content: center;
+        width: 100vw;
+        max-width: 100vw;
+        height: 95vh;
+        margin: 0;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+    .list {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        display: flex;
+        width: max-content;
+        transition: 1s;
+        z-index: 1;
+    }
+    .list img {
+        width: 100vw;
+        max-width: 100vw;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+    .buttons {
+        position: absolute;
+        top: 45%;
+        left: 5%;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        z-index: 2;
+    }
+    .buttons button {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #FFF5;
+        color: #FFF;
+        border: none;
+        font-size: 18;
+        font-family: monospace;
+        font-weight: 900;   
+    }
+    .buttons button:hover {
+        transition: all 300ms ease;
+        background-color: #0D4A0F;
+    }
+    .buttons button:hover {
+        transform: scale(1.6);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    }
+    .dots {
+        position: absolute;
+        z-index: 2;
+        bottom: 10px;
+        color: #FFF;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .dots li {
+        list-style: none;
+        width: 10px;
+        height: 10px;
+        background-color: #FFF;
+        margin: 20px;
+        border-radius: 20px;
+        transition: 1s;
+    }
+    .dots li.active {
+        width: 30px;
+    }
+    .texto {
+        max-width: 80vw;
+    position: absolute;
+    text-align: center;
+    padding: 0 110px;
+    top: 20px;
+    color: #FFFFFF;
+    font-weight: 800;
+    }
+    .texto h1 {
+        text-align: left;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 110px;
+    margin-bottom: 50px;
+    margin-left: 40px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+    }
+    .texto p {
+        font-size: 170%;
+        letter-spacing: 0.4px;
+        word-spacing: 1px;
+        margin-left: 40px;
+        -webkit-text-stroke-width: 1.2px;
+    -webkit-text-stroke-color: #000;
+    }
+    @media screen and (max-width: 893px){
+        .slider {
+            height: 400px;
+        }
+    }
+    .barr {
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+       width: 100vw;
+       height: 150px;
+       background: #0D3113;
+    }
+    .nono {
+        width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        background: #116B26;
+        margin-top: 15px;
+    }
+    .sisi {
+        display: flex;
+        margin-top: 15px;
+        width: 300px;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        background: #116B26;
+    }
+    li .yes1 {
+    width: 310px;
+    height: 10px;
+    padding: 0;
+    margin: 0;
+}
+li .yes2 {
+    width: 260px;
+    height: 10px;
+    padding: 0;
+    margin: 0;
+}
+    .gogo {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        width: 310px;
+        height: 10px;
+        background-color: #FFF;
+        border-radius: 20px;
+    }
+    .gogo2 {
+        margin: 0;
+        padding: 0;
+    list-style: none;
+        width: 260px;
+        height: 10px;
+        background-color: #FFF;
+        border-radius: 20px;
+}
+</style>
+<b>
+<title>
+VIDA VERDE
+</title>
+</b>
+</head>
+<body background="taller8.png">
+<center>
+<header>
+<div class="menu1">
+<div class="menu2">
+    <nav>
+<ul>
+<li> <a href="#" id="selected"></a></li>
+<li> <a href="#">CONTENIDOS</a>
+    <ul>
+        <li> <a href="file:///E:/PROYECTO%20-%20copia/RECICLAJE.html">EL RECICLAJE</a></li>
+        <li> <a href="file:///E:/PROYECTO%20-%20copia/NO%20A%20LAS%20DROGAS.html">NO A LAS DROGAS</a></li>
+    </ul>
+</li>
+<li> <a href="#">MATERIAL AUDIOVISUAL</a></li>
+<li> <a href="#">CREDITOS</a>
+    <ul>
+        <li> <a href="https://youtube.com/@El vigilant14?si=DQ6g22gw0Ym77xqG"> Vigilant <span></span></a></li>
+        <li> <a href="#"> Haapyfeat </a></li>
+    </ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<br>
+<div class="slider">
+    <div class="list">
+        <div class="item">
+            <img src="ROTE7380.JPG" style="filter: brightness(70%)">
+            <div class="texto">
+                <h1> VIDA VERDE </h1>
+                <p> Durante estos ultimos días, la humanidad cada vez se ve aun más envuelta en una fatal y enorme catastrofe que avanza con un ritmo desenfrenado, acabando por repercutir en todas las personas, no existe ninguna excepción. Esta crisis no se puede tratar de otra más que del inconciente estilo de vida y la soberbia forma de actuar de la sociedad, con la cual se ha plantado sobre nuestro planeta, y totalmente ajena a las consecuencias que podria desatar, cegado por el deseo de levantar un sistema lleno de soberania y de disfrutar del mayor numero de comodidades, ha relizado multiples procedimientos perjudiciales en la salud, tanto del medio ambiente como de nuestra misma especie. Sin embargo, a pesar del nivel critico y prioritario que representa esta situacion, la mayoria de personas continuan sin proporcionarle la verdadera importancia que le corresponde, pareciendo que en vez de intentar hacder algo para frenarla, solo se empeñan en incrimentar los daños a los que conlleva. No cabe duda de que nuestro lugar en este mundo cada vez se encuentra más comprometido.</p>
+                <p> Debido a lo anterior, nosotros hemos decido levantarnos y tomar la inciativa de un cambio, uno que nos traera verdaderos beneficios y prosperidad. El objetivo de esta pagina consiste en promover, fomentar e impartir los conociminetos necesarios para que las diversas comunidades adopten practicas que les permitan aplicar nuevos habitos en sus vidas, lo cual finalmente, les brindara una mejor calidad de vida, una mejor relacion con la naturaleza que les rodea, y la capacidad de sentirse satisfechos con el rumbo en el que se mantienen enfocados, puesto que estaran en paz con el planeta. Usted, el que ha tenido el valor de entrar a este sitio ¿Está listo para hacer un cambio? </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="MYMJ7921.JPG" style="filter: brightness(60%)">
+            <div class="texto">
+                <h1> VIDA VERDE </h1>
+                <p> Durante estos ultimos días, la humanidad cada vez se ve aun más envuelta en una fatal y enorme catastrofe que avanza con un ritmo desenfrenado, acabando por repercutir en todas las personas, no existe ninguna excepción. Esta crisis no se puede tratar de otra más que del inconciente estilo de vida y la soberbia forma de actuar de la sociedad, con la cual se ha plantado sobre nuestro planeta, y totalmente ajena a las consecuencias que podria desatar, cegado por el deseo de levantar un sistema lleno de soberania y de disfrutar del mayor numero de comodidades, ha relizado multiples procedimientos perjudiciales en la salud, tanto del medio ambiente como de nuestra misma especie. Sin embargo, a pesar del nivel critico y prioritario que representa esta situacion, la mayoria de personas continuan sin proporcionarle la verdadera importancia que le corresponde, pareciendo que en vez de intentar hacder algo para frenarla, solo se empeñan en incrimentar los daños a los que conlleva. No cabe duda de que nuestro lugar en este mundo cada vez se encuentra más comprometido.</p>
+                <p> Debido a lo anterior, nosotros hemos decido levantarnos y tomar la inciativa de un cambio, uno que nos traera verdaderos beneficios y prosperidad. El objetivo de esta pagina consiste en promover, fomentar e impartir los conociminetos necesarios para que las diversas comunidades adopten practicas que les permitan aplicar nuevos habitos en sus vidas, lo cual finalmente, les brindara una mejor calidad de vida, una mejor relacion con la naturaleza que les rodea, y la capacidad de sentirse satisfechos con el rumbo en el que se mantienen enfocados, puesto que estaran en paz con el planeta. Usted, el que ha tenido el valor de entrar a este sitio ¿Está listo para hacer un cambio? </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="KEWD4936.JPG" style="filter: brightness(80%)">
+            <div class="texto">
+                <h1> VIDA VERDE </h1>
+                <p> Durante estos ultimos días, la humanidad cada vez se ve aun más envuelta en una fatal y enorme catastrofe que avanza con un ritmo desenfrenado, acabando por repercutir en todas las personas, no existe ninguna excepción. Esta crisis no se puede tratar de otra más que del inconciente estilo de vida y la soberbia forma de actuar de la sociedad, con la cual se ha plantado sobre nuestro planeta, y totalmente ajena a las consecuencias que podria desatar, cegado por el deseo de levantar un sistema lleno de soberania y de disfrutar del mayor numero de comodidades, ha relizado multiples procedimientos perjudiciales en la salud, tanto del medio ambiente como de nuestra misma especie. Sin embargo, a pesar del nivel critico y prioritario que representa esta situacion, la mayoria de personas continuan sin proporcionarle la verdadera importancia que le corresponde, pareciendo que en vez de intentar hacder algo para frenarla, solo se empeñan en incrimentar los daños a los que conlleva. No cabe duda de que nuestro lugar en este mundo cada vez se encuentra más comprometido.</p>
+                <p> Debido a lo anterior, nosotros hemos decido levantarnos y tomar la inciativa de un cambio, uno que nos traera verdaderos beneficios y prosperidad. El objetivo de esta pagina consiste en promover, fomentar e impartir los conociminetos necesarios para que las diversas comunidades adopten practicas que les permitan aplicar nuevos habitos en sus vidas, lo cual finalmente, les brindara una mejor calidad de vida, una mejor relacion con la naturaleza que les rodea, y la capacidad de sentirse satisfechos con el rumbo en el que se mantienen enfocados, puesto que estaran en paz con el planeta. Usted, el que ha tenido el valor de entrar a este sitio ¿Está listo para hacer un cambio? </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="OSIL0259.JPG" style="filter: brightness(60%)">
+            <div class="texto">
+                <h1> VIDA VERDE </h1>
+                <p> Durante estos ultimos días, la humanidad cada vez se ve aun más envuelta en una fatal y enorme catastrofe que avanza con un ritmo desenfrenado, acabando por repercutir en todas las personas, no existe ninguna excepción. Esta crisis no se puede tratar de otra más que del inconciente estilo de vida y la soberbia forma de actuar de la sociedad, con la cual se ha plantado sobre nuestro planeta, y totalmente ajena a las consecuencias que podria desatar, cegado por el deseo de levantar un sistema lleno de soberania y de disfrutar del mayor numero de comodidades, ha relizado multiples procedimientos perjudiciales en la salud, tanto del medio ambiente como de nuestra misma especie. Sin embargo, a pesar del nivel critico y prioritario que representa esta situacion, la mayoria de personas continuan sin proporcionarle la verdadera importancia que le corresponde, pareciendo que en vez de intentar hacder algo para frenarla, solo se empeñan en incrimentar los daños a los que conlleva. No cabe duda de que nuestro lugar en este mundo cada vez se encuentra más comprometido.</p>
+                <p> Debido a lo anterior, nosotros hemos decido levantarnos y tomar la inciativa de un cambio, uno que nos traera verdaderos beneficios y prosperidad. El objetivo de esta pagina consiste en promover, fomentar e impartir los conociminetos necesarios para que las diversas comunidades adopten practicas que les permitan aplicar nuevos habitos en sus vidas, lo cual finalmente, les brindara una mejor calidad de vida, una mejor relacion con la naturaleza que les rodea, y la capacidad de sentirse satisfechos con el rumbo en el que se mantienen enfocados, puesto que estaran en paz con el planeta. Usted, el que ha tenido el valor de entrar a este sitio ¿Está listo para hacer un cambio? </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="KBFB0988.JPG" style="filter: brightness(60%)">
+            <div class="texto">
+                <h1> VIDA VERDE </h1>
+                <p> Durante estos ultimos días, la humanidad cada vez se ve aun más envuelta en una fatal y enorme catastrofe que avanza con un ritmo desenfrenado, acabando por repercutir en todas las personas, no existe ninguna excepción. Esta crisis no se puede tratar de otra más que del inconciente estilo de vida y la soberbia forma de actuar de la sociedad, con la cual se ha plantado sobre nuestro planeta, y totalmente ajena a las consecuencias que podria desatar, cegado por el deseo de levantar un sistema lleno de soberania y de disfrutar del mayor numero de comodidades, ha relizado multiples procedimientos perjudiciales en la salud, tanto del medio ambiente como de nuestra misma especie. Sin embargo, a pesar del nivel critico y prioritario que representa esta situacion, la mayoria de personas continuan sin proporcionarle la verdadera importancia que le corresponde, pareciendo que en vez de intentar hacder algo para frenarla, solo se empeñan en incrimentar los daños a los que conlleva. No cabe duda de que nuestro lugar en este mundo cada vez se encuentra más comprometido. </p>
+                <p> Debido a lo anterior, nosotros hemos decido levantarnos y tomar la inciativa de un cambio, uno que nos traera verdaderos beneficios y prosperidad. El objetivo de esta pagina consiste en promover, fomentar e impartir los conociminetos necesarios para que las diversas comunidades adopten practicas que les permitan aplicar nuevos habitos en sus vidas, lo cual finalmente, les brindara una mejor calidad de vida, una mejor relacion con la naturaleza que les rodea, y la capacidad de sentirse satisfechos con el rumbo en el que se mantienen enfocados, puesto que estaran en paz con el planeta. Usted, el que ha tenido el valor de entrar a este sitio ¿Está listo para hacer un cambio? </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button id="prev"><</button>
+        <button id="next">></button>
+    </div>
+
+    <ul class="dots">
+        <li class="active"> </li>
+        <li> </li>
+        <li> </li>
+        <li> </li>
+        <li> </li>
+    </ul>
+</div>
+<script> 
+let list = document.querySelector('.slider .list');
+let items = document.querySelectorAll('.slider .list .item');
+let dots = document.querySelectorAll('.slider .dots li');
+let prev = document.getElementById('prev');
+let next = document.getElementById('next');
+
+let active = 0;
+let lengthItems = items.length - 1;
+
+next.onclick = function(){
+    if (active + 1 > lengthItems) {
+        active = 0;
+    } else {
+        active = active + 1;
+    }
+    reloadSlider();
+}
+prev.onclick = function(){
+    if(active -1 < 0){
+        active = lengthItems;
+    } else {
+        active = active - 1;
+}
+    reloadSlider();
+}
+let refreshSlider = setInterval(()=> {next.click()}, 5000);
+function reloadSlider(){
+    let checkLeft = items[active].offsetLeft;
+    list.style.left = -checkLeft + 'px';
+
+    let lastActiveDot = document.querySelector('.slider .dots li.active');
+lastActiveDot.classList.remove('active');
+dots[active].classList.add('active');
+clearInterval(refreshSlider);
+refreshSlider = setInterval(()=> {next.click()}, 5000);
+}
+dots.forEach((li,key)=> {
+    li.addEventListener('click', function(){
+    active = key;
+    reloadSlider();
+    })
+})
+</script>
+<div class="barr">
+    <div class="nono">
+    <div class="gogo">
+        <li class="yes1"> </li>
+    </div>
+    </div>
+    <div class="sisi">
+    <div class="gogo2">
+        <li class="yes2"> </li>
+    </div>
+    </div>
+</div>
+</center>
+</body>
+</html>

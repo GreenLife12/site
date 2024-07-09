@@ -1,0 +1,464 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>
+EL RECICLAJE
+</title>
+<style type="text/css">
+    header {
+        margin: 0px;
+        padding:0 px;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: white;
+    }
+    .menu1 {
+       width: 100%;
+       height: 70px;
+       background: #086E12;
+       padding: 0px 20px;
+    }
+    .menu2 {
+max-width:1200px;
+margin: auto;
+height: 100%;
+    }
+    nav {
+        height: 100%;
+    }
+    nav > ul {
+height: 100%;
+display: flex;
+    }
+    nav ul li {
+        height: 100%;
+        padding: 0px 31px;
+        list-style: none;
+        position: relative;
+    }
+        nav > ul > li:first-child > a {
+            background-image: url(ritmo-cardiaco\ \(1\).png);
+            background-size: 24px;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+            nav > ul > li:first-child:hover > a {
+            background-image: url(logo.png);
+            background-size: 24px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            }
+    nav > ul > li > a {
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0px 25px;
+        color: white;
+        text-transform: uppercase;
+        font-size: 14 px;
+        transition: all 300ms ease;
+    }
+
+    nav > ul > li > a:hover{
+        transform: scale(1.1);
+        background: #0B8F18;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    }
+    #selected{
+        width: 100%;
+        height: 100%;
+        transform: scale(1.1);
+        background-color: #0B8F18;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    }
+    nav ul li ul {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 90px;
+        left:-5 px;
+        padding: 14px 0px;
+        visibility: hidden;
+        opacity: 0;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+        z-index: 10;
+        transition: all 300ms ease;
+    }
+    nav ul li:hover > ul {
+        visibility:visible;
+        opacity: 1;
+        top: 70px;
+
+    }
+    nav ul li ul:before {
+        content:'';
+        width: 0;
+        height: 0;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-bottom: 12px solid white;
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    
+    }
+    nav ul li ul li a {
+        text-decoration: none;
+        display: block;
+        color: #0B8F18;
+        padding: 6px;
+        padding-left: 14px;
+        margin-top: 10px;
+        font-size: 14px;
+        text-transform: uppercase;
+        transition: all 300ms ease;
+
+    }
+    nav ul li ul li a:hover {
+        background: #086E12;
+        color: #fff;
+        transform: scale(1.1);
+        padding-left: 30px;
+        font-size: 14px; 
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    }
+    .barr {
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+       width: 100vw;
+       height: 150px;
+       background: #0D3113;
+    }
+    .nono {
+        width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        background: #116B26;
+        margin-top: 15px;
+    }
+    .sisi {
+        display: flex;
+        margin-top: 15px;
+        width: 300px;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        background: #116B26;
+    }
+    li .yes1 {
+    width: 310px;
+    height: 10px;
+    padding: 0;
+    margin: 0;
+}
+li .yes2 {
+    width: 260px;
+    height: 10px;
+    padding: 0;
+    margin: 0;
+}
+    .gogo {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        width: 310px;
+        height: 10px;
+        background-color: #FFF;
+        border-radius: 20px;
+    }
+    .gogo2 {
+        margin: 0;
+        padding: 0;
+    list-style: none;
+        width: 260px;
+        height: 10px;
+        background-color: #FFF;
+        border-radius: 20px;
+}
+.ah {
+    margin:0;
+    padding: 0;
+    padding-left: 25px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+}
+.inicio {
+    margin: 0;
+    padding: 0;
+    width: 18rem;
+    height: 11rem;
+}
+@media screen and (max-width: 400px) {
+    .ah {
+        margin:0;
+    padding: 0;
+    padding-left: 5px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    
+    }
+    .inicio {
+        margin: 0;
+    padding: 0;
+    width: 10px;
+    height: 11rem;
+    }
+}
+.jiji {
+display: flex;
+width: 100vw;
+justify-content: center;
+}
+.titulo34 {
+    text-align: center;
+    font-size: 110px;
+}
+.re1 {
+    width: 20vw;
+    height: 26vh;
+    padding: 0px;
+    margin: 0px;
+    padding-right: 10vw;
+}
+.re2 {
+    padding: 0px;
+    width: 20vw;
+    height: 26vh;
+    margin: 0px;
+    padding-left: 10vw;
+}
+</style>
+</head>
+<body background="taller2.png">
+<center>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <header>
+        <div class="menu1">
+        <div class="menu2">
+            <nav>
+        <ul>
+        <li> <a href="#" id="selected"></a></li>
+        <li> <a href="file:///E:/PROYECTO%20-%20copia/VIDA%20VERDE.html">INICIO</a>
+        </li>
+        <li> <a href="#">MATERIAL AUDIOVISUAL</a></li>
+        <li> <a href="#">CREDITOS</a>
+            <ul>
+                <li> <a href="https://youtube.com/@El vigilant14?si=DQ6g22gw0Ym77xqG"> Vigilant </a></li>
+                <li> <a href="#"> Haapyfeat </a></li>
+            </ul>
+        </li>
+        </ul>
+        </nav>
+        </div>
+        </div>
+        </header>
+<b>
+<font color = "007A04" face = "cambria" size = "7">
+    <div class="jiji">
+<img class="re1" src="taller1.png"/>
+<h1 class="titulo34" > EL RECICLAJE </h1>
+<img class="re2" src="taller1.png"/>
+</div>
+<font color = "black" size = "5">
+<br>
+<p> En la actualidad, cada vez es más comun encontrar mucha basura en los lugares a los que vamos, que el agua y el aire esten contaminados y la falta de recursos, entre otros problemas. A pesar de que muy pocas personas le toman importancia, esta situacion es muy sobresaliente, ya que impiden que tengamos una buena calidad de vida. </p>
+<p> ¿Qué tan comun es que tu comunidad se reuna para conseguir algo? Tal vez digas que siempre lo hacen para realizar festivales o eventos, pero, ¿Lo han hecho alguna vez para un objetivo que ayude a todas las personas? Seguro que no. Por ende, en esta ocasión les traemos una solución para estos dos problemas, <span style = "color:green">EL RECICLAJE </span> 
+A continuacion, hablaremos sobre que es y como podemos llevarlo a cabo.</p>
+<hr color="black" size ="2">
+</center>
+<table style="float:left" border="3" bordercolor="007A04">
+<tr>
+<td>
+CONTENIDO
+<br>
+<a href="#quees">-¿Qué es?</a>
+<br>
+<a href="#tipos">-Tipos de reciclaje</a>
+<br>
+<a href="#utilidad">-Utilidad</a>
+<br>
+<a href="#basura">-Clasificación de la basura</a>
+<br>
+-Como llevarlo a cabo
+</td>
+</tr>
+</table>
+<font color = "007A04">
+    <div class="ah">
+<img class="inicio" style="float:left" src="taller14.png" width="180" height="150"/>
+<img class="inicio" style="float:left" src="taller15.png" width="180" height="150"/>
+<img class="inicio" style="float:left" src="taller16.jpeg" width="180" height="150"/>
+<img class="inicio" style="float:left" src="taller15.png" width="180" height="150"/>
+<img class="inicio" style="float:left" src="taller17.jpg" width="180" height="150"/>
+</div>
+<br>
+<a name="quees"></a> <h2 align="left"> ¿QUÉ ES? </h2>
+<font color = "black">
+<p align="left"> El reciclaje es un proceso de transformación en el cual, la basura y desechos son convertidos en nuevos recursos materiales, utilizados como materia prima para fabricar nuevos productos. </p>
+<p align="left">Algo que debemos aclarar es la diferencia entre reciclar y reutilizar. En el reciclaje los residuos son sometidos a procesos de transformaciones quimicas y fisicas, para poder ser aprovechados en la fabricación de un nuevo producto. En cambio, reutilizar es el aprovechamiento de un objeto para otro uso una vez que ha terminado su vida util.</p>
+<font color = "007A04">
+<a name="tipos"></a> <h2 align="center"> TIPOS DE RECICLAJE </h2>
+<font color = "black">
+<p align="center"> Algunos de los tipos de reciclaje más importantes, segun los materiales con los que trabajan, son los siguientes: </p>
+<br>
+<img style="float:left" src="taller18.png" width="225" height="150"/>
+<p style="float:left"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </p>
+<img style="float:left" src="taller19.png" width="225" height="150"/>
+<p style="float:left"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </p>
+<img style="float:left" src="taller20.png" width="225" height="150"/>
+<p style="float:left"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </p>
+<img style="float:left" src="taller21.png" width="225" height="150"/>
+<br>
+<br>
+<p align="left" style="float:left"> Reciclaje de Plastico&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+<p align="center" style="float:left">Reciclaje de Papel y Cartón&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+<p align="center" style="float:left"> Reciclaje de Vidrio&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+<p align="center" style="float:left"> Reciclaje de Orgánicos </p>
+<br>
+<br>
+<img style="float:left" src="taller22.png" width="225" height="150"/>
+<p style="float:left"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </p>
+<img style="float:left" src="taller23.png" width="225" height="150"/>
+<p style="float:left"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </p>
+<img style="float:left" src="taller24.png" width="225" height="150"/>
+<p style="float:left"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </p>
+<img style="float:left" src="taller25.png" width="225" height="150"/>
+<br>
+<br>
+<p align="left" style="float:left" size=5"> Reciclaje de textiles&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+<p align="left" style="float:left" size=5"> Reciclaje de Chatarras&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+<p align="left" style="float:left" size="5"> Reciclaje de Baterías&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+<p align="left" style="float:left" size="5"> Reciclaje de Escombros</p>
+<br>
+<br>
+<p style="float:left"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </p>
+<img style="float:left" src="taller26.png" width="225" height="150"/>
+<p style="float:left"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </p>
+<img style="float:left" src="taller27.png" width="225" height="150"/>
+<br>
+<br>
+<br>
+<p align="left" style="float:left" size=5">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspReciclaje de Electrodomésticos&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+<p align="left" style="float:left" size=5"> Reciclaje de Agua</p>
+<br>
+<br>
+<font color="007A04">
+<a name="utilidad"></a> <h2 align="right"> UTILIDAD </h2>
+<font color="black">
+<p align="right"> El reciclaje nos ayuda a preservar el medio ambiente, ahorrar recursos para tener un mejor futuro y fomentar la conciencia y consumo responsable. Algunos ejemplos de estos beneficios son: </p>
+<li>Evitar la explotación de recursos naturales: Ya que el reciclaje se encarga de que los desechos vuelvan a ser utilizados en la fabricación de productos, en vez de conseguir recursos nuevos.</li>
+<li>Ahorrar energía y dinero: Ya que es menos costoso (tanto en dinero como en esfuerzo) conseguir materias primas para la fabricación. </li>
+<li>Evitar el uso de metodos de extracción de recursos contaminantes e invasivos.</li>
+<li>Reducir la cantidad de desechos que llegan a los vertederos.</li>
+<li>Ayuda a combatir el calentamiento global.</li>
+<li>Reduce la emisión de gases de efecto invernadero(GEI).</li>
+<font color="007A04">
+<a name="basura"></a> <h2 align="center"> CLASIFICACIÓN DE LA BASURA </h2>
+<br>
+<font color="black">
+<p align="center"> La forma correcta de depositar nuestros desechos segun el color de los contenedores es la siguiente:</p>
+<br>
+<p style="float:left"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+<img style="float:left" src="taller30.png" width="225" height="150"/>
+<p style="float:left"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+<img style="float:left" src="taller32.png" width="225" height="150"/>
+<p style="float:left"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+<img style="float:left" src="taller33.png" width="225" height="150"/>
+<p style="float:left"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+<img style="float:left" src="taller31.png" width="225" height="150"/>
+<br>
+<br>
+<p align="left" style="float:left" size="5"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPapel Y Cartón&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+<p align="left" style="float:left" size="5"> Plásticos&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+<p align="left" style="float:left" size="5"> Metal&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+<p align="left" style="float:left" size="5"> Vidrio</p>
+<br>
+<br>
+<p style="float:left"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+<img style="float:left" src="taller34.png" width="225" height="150"/>
+<p style="float:left"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+<img style="float:left" src="taller37.png" width="225" height="150"/>
+<p style="float:left"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+<img style="float:left" src="taller36.png" width="225" height="150"/>
+<p style="float:left"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+<img style="float:left" src="taller35.png" width="225" height="150"/>
+<br>
+<br>
+<p align="left" style="float:left" size="5"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspInorgánicos&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+<p align="left" style="float:left" size="5"> Manejo Especial&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+<p align="left" style="float:left" size="5"> Textiles&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+<p align="Left" style="float:left" size="5"> Desechos Peligrosos</p>
+<br>
+<br>
+<p style="float:left"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+<img style="float:left" src="taller28.png" width="225" height="150"/>
+<p style="float:left"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+<img style="float:left" src="taller29.png" width="225" height="150"/>
+<br>
+<br>
+<p align="left" style="float:left" size="5"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspInorgánicos y no reciclables&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+<p align="left" style="float:left" size="5"> Organicos</p>
+<br>
+<br>
+<font color="007A04">
+<a name="hacer"></a> <h2 align="left"> COMO LLEVARLO A CABO </h2>
+<font color="black">
+<p align="center"> Ya te hemos enseñado todas las caracteristicas del reciclaje, ahora es momento de darte algunas ideas de como puedes llevarlo a cabo</p>
+<li> Separa correctamente tus residuos y señala al recolector como están organizados</li>
+<li> Puedes recoger las botellas y envases que sean basura y encuentres en tu día a día, para despues venderlos a una recicladora ¡Reciclaras al mismo tiempo que ganas un poco más de dinero para tu bolsillo!</li>
+<li> Si tienes plantas en casa, puedes usar tus residuos organicos para hacer una composta y así darle una mano a tus cultivos</li>
+<font color="blue">
+<h3 align="left">REUTILIZAR</h3>
+<font color="black">
+<p align="left"> Los siguientes consejos son más que nada para reutilizar y no reciclar, pero de todas maneras pueden servirte para generar menos basura </p>
+<li> Utiliza los restos de papel que ya no uses para hacer papel reciclado </li>
+<li> Usa las botellas y envases que ya son basura para hacer manualidades u otras utilidades ¡El punto es darles una nueva vida!"</li>
+<hr color="black" size ="2">
+<p align="center"> ¡Ya hemos terminado! Solo recuerda, reciclar no solo es importante para el mundo se vea más bonito, sino que es importante para eliminar la basura, cuidar a los animales, sanar al planeta y para tener ¡Una mejor vida!</p>
+<br>
+<center>
+<img src="taller13.png" width="150" height="150"/>
+<br>
+<br>
+<br>
+<div class="barr">
+    <div class="nono">
+    <div class="gogo">
+        <li class="yes1"> </li>
+    </div>
+    </div>
+    <div class="sisi">
+    <div class="gogo2">
+        <li class="yes2"> </li>
+    </div>
+    </div>
+</div>
+</b>
+</body>
+</html>
